@@ -6,3 +6,10 @@ class Player(Block):
 
     def __init__(self, color):
         super().__init__(390, 20, 0, 0, self.size, self.size, color)
+
+    def applyGravity(self, gravity):
+        self.yVelocity += gravity
+
+    def jump(self, distance):
+        self.yVelocity -= distance
+        self.yUp += self.yVelocity
