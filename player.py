@@ -11,5 +11,5 @@ class Player(Block):
         self.yVelocity += gravity
 
     def jump(self, distance):
-        self.yVelocity -= distance
+        self.yVelocity = distance*-1
         self.yUp += self.yVelocity
